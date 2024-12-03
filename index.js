@@ -5,7 +5,7 @@ xhr.withCredentials = true;
 
 xhr.addEventListener('readystatechange', function () {
 	if (this.readyState === this.DONE) {
-		document.getElementsByClassName("lineone").textContent = this.responseText;
+		console.log(this.responseText);
 	}
 });
 
