@@ -8,13 +8,13 @@ const options = {
 };
 
 try {
-	const response = await fetch(url, options);
-	const result = await response.json();
-	console.log(result.results);
+	const response = fetch(url, options);
+	const result = response.json();
+	console.log(result);
 
 	const data = result.results;
 
-	let city = data.name;	
+	let city = result.name;	
 
 	document.getElementsByClassName('lineone').innerHTML = city;
 
