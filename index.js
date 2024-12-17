@@ -10,6 +10,7 @@ fetch('https://weatherapi-com.p.rapidapi.com/current.json?q=43.119%2C-85.559', o
 	.then((response) => {
 		console.log(response)
 		
-		document.getElementById('lineone').innerHTML = response.current.feelslike_f;
+		document.getElementById('linetwo').innerHTML = response.current.feelslike_f + '°F';
+		document.getElementById('linethree').innerHTML = response.location.localtime;
 	})
 	.catch(err => console.error(err));
